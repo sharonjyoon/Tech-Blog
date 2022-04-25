@@ -43,6 +43,10 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/signup', (req, res) => {
+  res.render('signup');
+});
+
+router.get('/post/:id', (req, res) => {
   Post.findOne({
     where: {id: req.params.id},
     attributes: [

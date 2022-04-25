@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../../models');
 const sequelize = require('../../config/connection');
-const withAuth = requrie('../../utils/auth');
+const withAuth = require('../../utils/auth');
 //returns all
 router.get('/', (req, res) => {
   console.log('=====================');
@@ -41,7 +41,7 @@ router.get('./:id', (req, res)=> {
   }
 ]
 })
-.then(dbPostData) {
+.then(dbPostData => {
   if(!dbPostData) {
     res.status(400).json({ message: 'No post found with this id'});
     return;
@@ -71,8 +71,8 @@ router.put('/:id', withAuth, (req, res)=> {
   Post.update({
     title: req.body.title,
     content: req.body.content
-  }, {where {id: req.params.id}})
-  .then(dbPostData) => {
+  }, {where: {id: req.params.id}})
+  .then(dbPostData => {
     if(!dbPostData) {
       res.status(400).json({message: 'No post found with this id'});
       return;
@@ -87,7 +87,7 @@ router.put('/:id', withAuth, (req, res)=> {
 //delete an entry
 router.delete('/:id', withAuth, (req, res) => {
   Post.destroy({ where: {id: req.params.id}})
-  .then(dbPostData) {
+  .then(dbPostData => {
     if(!dbPostData) {
       res.status(400).json({message: 'No post found with this id'});
       return;
@@ -100,5 +100,5 @@ router.delete('/:id', withAuth, (req, res) => {
   });
 });
 
-module.exposrts = router;
+module.exports = router;
 
