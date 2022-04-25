@@ -15,16 +15,4 @@ if(process.env.JAWSDB_URL) {
   });
 }
 
-// let sequelize = new Sequelize(process.env.JAWSDB_URL ? process.env.JAWSDB_URL : process.env.LOCALDB_URL)
-
-// const db = mysql.createConnection({
-//   host: 'localhost',
-//   user: 'root',
-//   password: 'rootroot',
-//   database: 'tech_blog',
-// },
-//   console.log(`Connected to the tech_blog database.`)
-// );
-
-
 module.exports = sequelize;
