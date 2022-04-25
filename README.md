@@ -1,7 +1,9 @@
 # Tech_blog
-## Description This application is a CMS-style blog made for developers that wish to share their experiences and thoughts about technical concepts or even recent advancements in the world of software engineering. This application gives developers a chance to share their tutorials, thoughts, or experiences interacting with different technologies. This application is similar to a Wordpress site where developers can publish their posts, comment on others' posts.
+## Description 
+This application is a CMS-style blog made for developers that wish to share their experiences and thoughts about technical concepts or even recent advancements in the world of software engineering. This application gives developers a chance to share their tutorials, thoughts, or experiences interacting with different technologies. This application is similar to a Wordpress site where developers can publish their posts, comment on others' posts.
 
-## Getting Started Please type from the CLI. 
+## Getting Started 
+Please type from the CLI. 
 - To run tests: npm run test 
 - To seed database: npm run seed 
 - To start server: node server.js
